@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="c:\Users\phvmachado\Downloads\f547f266b1b19179e22ea3044bdd38c6_1_-removebg-preview.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Login | Profit Store</title>
+</head>
+<body>
+<div class="container">
+    <div class="leftSide"></div>
+    <div class="rightSide">
+        <div class="content" style="display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: center; height: 10vh; margin-top: 40px;margin-bottom: 140px;">
+                <a href="../home/home.html">
+                    <img src="c:\Users\phvmachado\Downloads\f547f266b1b19179e22ea3044bdd38c6_1_-removebg-preview.png" style=" user-select: none; pointer-events: none; width: 200px; height: 200px;">
+                </a>
+            </div>
+            <div style="display: flex; min-width: 20vw; justify-content: center; flex-direction: column; border: 1px solid #eee; padding: 20px; border-radius: 10px;">
+                <div style="display: flex; flex-direction: column;">
+                    <span style="font-size: 12px;">E-mail</span>
+                    <input required type="text" id="user" placeholder="Digite aqui seu e-mail..." class="styledInput">
+                </div>
+                <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                    <span style="font-size: 12px;">Senha</span>
+                    <input required type="password" id="password" placeholder="Digite aqui sua senha..." class="styledInput">
+                </div>
+                <div style="margin-top: 20px; display: flex; justify-content: center;">
+                    <button onclick="saveForm()" class="submitButton">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function saveForm() {
+        var user = document.getElementById("user").value;
+        var password = document.getElementById("password").value;
+        localStorage.setItem("user", user);
+        localStorage.setItem("password", password);
+        window.open("file:///C:/Users/phvmachado/Documents/web/Profit%20Website/Profit%20Website/pages/home/home.html");
+    }
+</script>
+</body>
+</html>
